@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "bash script! also failing :("
-c = a
+#c = a
