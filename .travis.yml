@@ -8,5 +8,4 @@
 #  - shellcheck --version
 
 script:
-  - shellcheck $(grep -rIzl '^#![[:blank:]]*/bin/sh' ./ | grep .git -v | cat)
-  - shellcheck $(grep -rIzl '^#![[:blank:]]*/bin/bash' ./ | cat)
+  - shellcheck $(grep -rl '"^#!/bin/sh\|^#!/bin/bash\|^#!/usr/bin/env bash' ./ | grep -v ".git\|travis.yml" | cat)
